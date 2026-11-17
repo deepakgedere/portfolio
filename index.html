@@ -1,151 +1,321 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f7fb">
-  <meta name="description" content="Deepak Gedere's portfolio: test automation, Playwright, TypeScript, and software quality engineering projects.">
-  <title>Deepak Gedere — QA Automation Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--ink:#17202f;--muted:#697386;--line:#e6e9f0;--paper:#f6f7fb;--white:#fff;--blue:#4259e8;--blue-dark:#3045ce;--mint:#cdf3df;--mono:'DM Mono',monospace;--sans:'DM Sans',sans-serif;--display:'Manrope',sans-serif;--shadow:0 12px 35px rgba(27,39,70,.07)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1120px,calc(100% - 48px));margin:auto}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(230,233,240,.85)}.brand{font-family:var(--display);font-weight:800;letter-spacing:-.7px;font-size:18px}.brand span{color:var(--blue)}.nav{display:flex;gap:32px;align-items:center;color:#515c70;font-size:13px;font-weight:600}.nav a:hover{color:var(--blue)}.nav .nav-cta{padding:10px 16px;border:1px solid #dfe3ed;border-radius:8px;color:var(--ink);background:white}.hero{padding:88px 0 86px;display:grid;grid-template-columns:1.28fr .72fr;gap:60px;align-items:center}.eyebrow{display:flex;gap:10px;align-items:center;color:var(--blue);font:500 11px var(--mono);letter-spacing:1.5px;text-transform:uppercase}.eyebrow:before{content:'';width:24px;height:1px;background:var(--blue)}h1,h2,h3,p{margin-top:0}.hero h1{font:700 clamp(46px,6.2vw,72px)/1.07 var(--display);letter-spacing:-4px;margin:20px 0 22px;max-width:680px}.hero h1 em{font-style:normal;color:var(--blue)}.hero-copy{font-size:17px;line-height:1.8;color:var(--muted);max-width:570px;margin-bottom:30px}.actions{display:flex;gap:12px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 18px;border-radius:8px;font-size:13px;font-weight:700;transition:transform .18s,background .18s}.button:hover{transform:translateY(-2px)}.button-primary{background:var(--blue);color:white;box-shadow:0 7px 16px rgba(66,89,232,.2)}.button-primary:hover{background:var(--blue-dark)}.button-secondary{background:white;border:1px solid var(--line)}.button svg{width:16px;height:16px}.hero-card{position:relative;padding:28px;border:1px solid #e7eaf1;border-radius:16px;background:linear-gradient(145deg,#fff 15%,#f0f3ff 100%);box-shadow:var(--shadow);overflow:hidden}.hero-card:after{content:'';position:absolute;width:190px;height:190px;border-radius:50%;right:-85px;top:-85px;background:rgba(66,89,232,.07)}.card-label{font:11px var(--mono);text-transform:uppercase;letter-spacing:1.2px;color:#818ba0}.code-window{margin:22px 0 20px;background:#182234;border-radius:10px;padding:20px 18px;color:#e3eaf6;font:12px/2 var(--mono);position:relative}.code-dots{display:flex;gap:5px;margin-bottom:14px}.code-dots i{width:7px;height:7px;border-radius:50%;background:#68758a}.code-dots i:first-child{background:#ff8585}.code-dots i:nth-child(2){background:#f3c76e}.code-dots i:nth-child(3){background:#71d5a5}.code-line{white-space:nowrap}.code-line .key{color:#93abff}.code-line .value{color:#a6e8c1}.code-line .accent{color:#f7ce83}.hero-card-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px}.available{font-size:12px;color:#667185}.status{display:inline-flex;align-items:center;gap:7px;font-size:11px;color:#28794b;font-weight:700}.status:before{content:'';width:7px;height:7px;border-radius:50%;background:#42bc7a;box-shadow:0 0 0 3px #dff5e8}.section{padding:78px 0}.section-projects{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:30px}.section-heading .eyebrow{margin-bottom:13px}.section-heading h2{font:700 36px/1.2 var(--display);letter-spacing:-1.6px;margin:0}.section-heading p{color:var(--muted);font-size:14px;margin:10px 0 0}.project-count{font:12px var(--mono);color:#788398;padding-bottom:5px}.toolbar{display:flex;gap:12px;margin-bottom:25px;align-items:center;flex-wrap:wrap}.search-wrap{position:relative;flex:1;min-width:220px}.search-wrap svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:#8791a3}.search{width:100%;height:43px;border:1px solid var(--line);border-radius:8px;padding:0 14px 0 39px;background:#fbfcfe;outline:none;color:var(--ink);font-size:13px}.search:focus{border-color:#9ba9ff;box-shadow:0 0 0 3px rgba(66,89,232,.09)}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:white;color:#657086;border-radius:7px;padding:9px 12px;font-size:11px;font-weight:700;cursor:pointer}.filter:hover,.filter.active{background:#eef0ff;border-color:#d6dbff;color:var(--blue)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.project{border:1px solid var(--line);border-radius:11px;background:white;padding:21px;min-height:214px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s,border-color .2s}.project:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#d4d9e8}.project-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:17px}.repo-icon{width:34px;height:34px;border-radius:9px;background:#f0f2ff;color:var(--blue);display:grid;place-items:center}.repo-icon svg{width:17px;height:17px}.project-link{color:#8690a2}.project-link svg{width:16px;height:16px}.project h3{font:700 15px var(--display);letter-spacing:-.2px;margin:0 0 8px;overflow-wrap:anywhere}.project p{font-size:12px;line-height:1.65;color:var(--muted);margin:0 0 20px;flex:1}.project-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;color:#818b9d;font:10px var(--mono)}.language{display:flex;align-items:center;gap:7px}.language:before{content:'';width:8px;height:8px;border-radius:50%;background:#6976e8}.language[data-language="TypeScript"]:before{background:#3178c6}.language[data-language="Java"]:before{background:#e76f00}.language[data-language="C#"]:before{background:#68217a}.language[data-language="JavaScript"]:before{background:#e5c72e}.language[data-language="HTML"]:before{background:#e34c26}.language[data-language="CSS"]:before{background:#563d7c}.empty{grid-column:1/-1;border:1px dashed #d9deea;border-radius:10px;text-align:center;padding:35px;color:var(--muted);font-size:13px}.loading{grid-column:1/-1;color:var(--muted);padding:30px;text-align:center;font-size:13px}.skills-section{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px;align-items:start}.skills-copy h2{font:700 34px/1.2 var(--display);letter-spacing:-1.3px;margin:12px 0}.skills-copy p{color:var(--muted);font-size:14px;line-height:1.8}.skill-groups{display:grid;gap:13px}.skill-group{background:white;border:1px solid var(--line);border-radius:10px;padding:18px 20px}.skill-group h3{font:600 11px var(--mono);letter-spacing:.8px;text-transform:uppercase;color:#7a8497;margin:0 0 12px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{padding:7px 10px;background:#f5f6fa;border-radius:6px;color:#475368;font-size:11px;font-weight:600}.contact{padding:60px 0 68px;background:#202b42;color:#fff}.contact-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}.contact .eyebrow{color:#aab8ff}.contact .eyebrow:before{background:#aab8ff}.contact h2{font:700 34px/1.2 var(--display);letter-spacing:-1.4px;margin:14px 0 8px}.contact p{margin:0;color:#b5bfd0;font-size:13px}.contact .button{background:#fff;color:#202b42;white-space:nowrap}.footer{padding:21px 0;color:#8490a2;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:15px;align-items:center}.footer a:hover{color:var(--blue)}.footer-links{display:flex;gap:18px}.toast{font-size:12px;color:#8791a3;display:none}.toast.show{display:block}
-    @media(max-width:800px){.hero{grid-template-columns:1fr;gap:34px;padding:65px 0}.hero-card{max-width:520px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.skills-section{grid-template-columns:1fr;gap:25px}.section{padding:62px 0}}
-    @media(max-width:560px){.wrap{width:min(100% - 32px,1120px)}.topbar{height:66px}.nav{gap:15px}.nav>a:not(.nav-cta){display:none}.hero{padding:52px 0}.hero h1{font-size:48px;letter-spacing:-2.7px}.hero-copy{font-size:15px}.hero-card{padding:21px}.section-heading h2{font-size:30px}.section-head{align-items:flex-start}.grid{grid-template-columns:1fr}.project{min-height:194px}.toolbar{align-items:stretch}.filters{width:100%}.filter{flex:1}.contact-inner{align-items:flex-start;flex-direction:column}.contact h2{font-size:30px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}}
-    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
-  </style>
-</head>
-<body>
-  <header class="wrap topbar">
-    <a class="brand" href="#home" aria-label="Deepak Gedere home">deepak<span>.</span></a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#projects">Projects</a><a href="#skills">Skills</a><a class="nav-cta" href="#contact">Say hello ↗</a>
-    </nav>
-  </header>
-  <main>
-    <section class="wrap hero" id="home">
-      <div>
-        <div class="eyebrow">QA automation engineer</div>
-        <h1>Making software<br>work <em>beautifully.</em></h1>
-        <p class="hero-copy">Hi, I’m Deepak — I build dependable test automation that helps teams ship with confidence. Explore my work in Playwright, TypeScript, and software quality.</p>
-        <div class="actions">
-          <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
-          <a class="button button-secondary" href="https://github.com/deepakgedere" target="_blank" rel="noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Deepak Gedere portfolio" />
+    <title>Deepak Gedere — QA Automation Engineer</title>
+    <style>
+      :root {
+        --ink: #17202f;
+        --muted: #697386;
+        --line: #e6e9f0;
+        --paper: #f6f7fb;
+        --white: #ffffff;
+        --blue: #4259e8;
+        --blue-dark: #3045ce;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: var(--paper);
+        color: var(--ink);
+      }
+      a { color: inherit; text-decoration: none; }
+      .wrap {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 76px;
+        border-bottom: 1px solid var(--line);
+      }
+      .brand {
+        font-size: 1.9rem;
+        font-weight: 800;
+        letter-spacing: -0.08em;
+      }
+      .brand span { color: var(--blue); }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+      .nav a {
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .nav-cta {
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--ink) !important;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: center;
+        gap: 48px;
+        padding: 82px 0 68px;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--blue);
+      }
+      .eyebrow::before {
+        content: "";
+        width: 24px;
+        height: 1px;
+        background: var(--blue);
+      }
+      h1 {
+        margin: 18px 0 18px;
+        font-size: clamp(3rem, 5.5vw, 5.5rem);
+        line-height: 0.96;
+        letter-spacing: -0.07em;
+      }
+      h1 em {
+        color: var(--blue);
+        font-style: normal;
+      }
+      .hero-copy {
+        max-width: 600px;
+        color: var(--muted);
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 28px;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px 22px;
+        border-radius: 12px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: 0.2s ease;
+      }
+      .button-primary {
+        background: var(--blue);
+        color: white;
+        box-shadow: 0 8px 20px rgba(66, 89, 232, 0.18);
+      }
+      .button-primary:hover { background: var(--blue-dark); }
+      .button-secondary {
+        background: white;
+        border: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .hero-card {
+        position: relative;
+        padding: 24px 20px 18px;
+        background: linear-gradient(180deg, #fff 0%, #f2f5ff 100%);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(34, 47, 73, 0.08);
+      }
+      .card-label {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #7e89a1;
+        font-weight: 700;
+      }
+      .code-window {
+        margin: 18px 0 16px;
+        padding: 18px 16px;
+        border-radius: 14px;
+        background: #162234;
+        color: #dfe8fd;
+        font-family: "Courier New", monospace;
+        font-size: 13px;
+      }
+      .code-dots {
+        display: flex;
+        gap: 7px;
+        margin-bottom: 14px;
+      }
+      .code-dots i {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        display: block;
+      }
+      .code-dots i:nth-child(1) { background: #f65d58; }
+      .code-dots i:nth-child(2) { background: #f6c451; }
+      .code-dots i:nth-child(3) { background: #57c460; }
+      .code-line { white-space: nowrap; }
+      .key { color: #9ab6ff; }
+      .value { color: #8fe0a9; }
+      .accent { color: #ffbf7a; }
+      .hero-card-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .status {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: #dff9ea;
+        color: #1f7d49;
+        font-weight: 700;
+      }
+      .contact {
+        padding: 64px 0 72px;
+        background: #edf3ff;
+      }
+      .contact-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+      }
+      .contact h2 {
+        margin: 12px 0 10px;
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: -0.06em;
+      }
+      .contact p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 16px;
+      }
+      .contact-item {
+        color: var(--ink);
+        font-weight: 600;
+        font-size: 1.05rem;
+      }
+      .contact-item a {
+        color: var(--blue);
+      }
+      footer {
+        padding: 18px 0 30px;
+      }
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        color: var(--muted);
+        font-size: 0.96rem;
+      }
+      .footer-links {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .footer-links a { color: var(--ink); font-weight: 600; }
+      @media (max-width: 800px) {
+        .hero { grid-template-columns: 1fr; padding-top: 58px; }
+        .contact-inner { flex-direction: column; align-items: flex-start; }
+      }
+      @media (max-width: 560px) {
+        .nav a:not(.nav-cta) { display: none; }
+        .topbar { height: 66px; }
+        .hero { padding-top: 42px; }
+        .hero-card-bottom { align-items: flex-start; flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="wrap topbar">
+      <a class="brand" href="#home" aria-label="Deepak Gedere home">deepak<span>.</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a class="nav-cta" href="#contact">Say hello ↗</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="wrap hero" id="home">
+        <div>
+          <div class="eyebrow">QA automation engineer</div>
+          <h1>Making software<br>work <em>beautifully.</em></h1>
+          <p class="hero-copy">Hi, I’m Deepak — I build dependable test automation that helps teams ship with confidence. Explore my work in Playwright, TypeScript, and software quality.</p>
+          <div class="actions">
+            <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="https://github.com/deepakgedere" target="_blank" rel="noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Code sample and availability">
+          <div class="card-label">A little about my approach</div>
+          <div class="code-window" aria-hidden="true">
+            <div class="code-dots"><i></i><i></i><i></i></div>
+            <div class="code-line"><span class="key">const</span> quality = {</div>
+            <div class="code-line">&nbsp;&nbsp;curiosity: <span class="value">true</span>,</div>
+            <div class="code-line">&nbsp;&nbsp;bugsFound: <span class="accent">'early'</span>,</div>
+            <div class="code-line">&nbsp;&nbsp;confidence: <span class="value">'always'</span></div>
+            <div class="code-line">};</div>
+          </div>
+          <div class="hero-card-bottom">
+            <span>Building better ways to test.</span>
+            <span class="status">Open to connect</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="wrap contact-inner">
+          <div>
+            <div class="eyebrow">Have a project in mind?</div>
+            <h2>Let’s make it work better.</h2>
+            <p>Explore my repositories or get in touch directly for collaboration, automation work, or software quality projects.</p>
+          </div>
+          <div class="contact-details">
+            <div class="contact-item">Email: <a href="mailto:deepakgedere@gmail.com">deepakgedere@gmail.com</a></div>
+            <div class="contact-item">Phone: <a href="tel:+918197371089">+91-8197371089</a></div>
+            <div class="contact-item"><a href="https://github.com/deepakgedere" target="_blank" rel="noreferrer">Connect on GitHub ↗</a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap footer">
+      <div class="footer-inner">
+        <span>© <span id="year"></span> Deepak Gedere. Built with care.</span>
+        <div class="footer-links">
+          <a href="#home">Back to top ↑</a>
+          <a href="https://github.com/deepakgedere" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
-      <aside class="hero-card" aria-label="Code sample and availability">
-        <div class="card-label">A little about my approach</div>
-        <div class="code-window" aria-hidden="true">
-          <div class="code-dots"><i></i><i></i><i></i></div>
-          <div class="code-line"><span class="key">const</span> quality = {</div>
-          <div class="code-line">&nbsp;&nbsp;curiosity: <span class="value">true</span>,</div>
-          <div class="code-line">&nbsp;&nbsp;bugsFound: <span class="accent">'early'</span>,</div>
-          <div class="code-line">&nbsp;&nbsp;confidence: <span class="value">'always'</span></div>
-          <div class="code-line">};</div>
-        </div>
-        <div class="hero-card-bottom"><span class="available">Building better ways to test.</span><span class="status">Open to connect</span></div>
-      </aside>
-    </section>
+    </footer>
 
-    <section class="section section-projects" id="projects">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-heading"><div class="eyebrow">Selected work</div><h2>Projects I’ve worked on</h2><p>A collection of automation, learning, and testing projects from GitHub.</p></div>
-          <div class="project-count" id="project-count">Loading projects…</div>
-        </div>
-        <div class="toolbar">
-          <label class="search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><input class="search" id="search" type="search" placeholder="Search projects…" aria-label="Search projects"></label>
-          <div class="filters" aria-label="Filter projects by language"><button class="filter active" data-filter="all">All projects</button><button class="filter" data-filter="TypeScript">TypeScript</button><button class="filter" data-filter="Java">Java</button><button class="filter" data-filter="C#">C#</button></div>
-        </div>
-        <div class="grid" id="project-grid" aria-live="polite"><div class="loading">Finding projects on GitHub…</div></div>
-        <div class="toast" id="project-note" role="status"></div>
-      </div>
-    </section>
-
-    <section class="section" id="skills">
-      <div class="wrap skills-section">
-        <div class="skills-copy"><div class="eyebrow">What I bring</div><h2>Quality is a feature.</h2><p>I enjoy turning complex workflows into clear, repeatable tests. My projects reflect hands-on work across browser automation, API testing, and programming fundamentals.</p></div>
-        <div class="skill-groups">
-          <div class="skill-group"><h3>Test automation</h3><div class="tags"><span class="tag">Playwright</span><span class="tag">Browser testing</span><span class="tag">API testing</span><span class="tag">End-to-end tests</span></div></div>
-          <div class="skill-group"><h3>Languages</h3><div class="tags"><span class="tag">TypeScript</span><span class="tag">Java</span><span class="tag">C#</span></div></div>
-          <div class="skill-group"><h3>Focus</h3><div class="tags"><span class="tag">Test design</span><span class="tag">Reliable automation</span><span class="tag">Software quality</span></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact"><div class="wrap contact-inner"><div><div class="eyebrow">Have a project in mind?</div><h2>Let’s make it work better.</h2><p>Explore my repositories or get in touch through GitHub.</p></div><a class="button" href="https://github.com/deepakgedere" target="_blank" rel="noreferrer">Connect on GitHub <span aria-hidden="true">↗</span></a></div></section>
-  </main>
-  <footer class="wrap footer"><div class="footer-inner"><span>© <span id="year"></span> Deepak Gedere. Built with care.</span><div class="footer-links"><a href="#home">Back to top ↑</a><a href="https://github.com/deepakgedere" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></footer>
-  <script>
-    (() => {
-      const username = 'deepakgedere';
-      const fallback = [
-        {name:'TEPL-ExposedSwipesAPI-Automation',description:'Testing the 3 exposed swipes API in TEPL.',language:'TypeScript',html_url:'https://github.com/deepakgedere/TEPL-ExposedSwipesAPI-Automation',updated_at:'2026-11-05T11:11:10Z',stargazers_count:0},
-        {name:'TEPL-BulkAccessProvisioning',description:'Automate test cases for bulk access provisioning and de-provisioning in TEPL-Genetec.',language:'TypeScript',html_url:'https://github.com/deepakgedere/TEPL-BulkAccessProvisioning',updated_at:'2026-11-05T11:08:47Z',stargazers_count:0},
-        {name:'MBRDI-TEST-AUTOMATION',description:'Automate the testing of badge issuance in MBRDI.',language:'TypeScript',html_url:'https://github.com/deepakgedere/MBRDI-TEST-AUTOMATION',updated_at:'2026-11-05T11:06:11Z',stargazers_count:0},
-        {name:'playwrightPractice',description:'A collection of Playwright practice and learning projects.',language:'TypeScript',html_url:'https://github.com/deepakgedere/playwrightPractice',updated_at:'2026-02-06T07:11:19Z',stargazers_count:0},
-        {name:'geps-Testing-backup',description:'Testing project and code backup.',language:'Java',html_url:'https://github.com/deepakgedere/geps-Testing-backup',updated_at:'2026-03-25T09:01:59Z',stargazers_count:0},
-        {name:'Learning',description:'Programming and software development learning projects.',language:'C#',html_url:'https://github.com/deepakgedere/Learning',updated_at:'2026-03-10T07:05:54Z',stargazers_count:0}
-      ];
-      const grid = document.getElementById('project-grid');
-      const count = document.getElementById('project-count');
-      const search = document.getElementById('search');
-      const note = document.getElementById('project-note');
-      let projects = [];
-      let activeFilter = 'all';
-      const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-      const dateLabel = value => {
-        if (!value) return '';
-        const date = new Date(value);
-        if (Number.isNaN(date.getTime())) return '';
-        return `Updated ${new Intl.DateTimeFormat('en', {month:'short', year:'numeric'}).format(date)}`;
-      };
-      const render = () => {
-        const term = search.value.trim().toLowerCase();
-        const shown = projects.filter(project => {
-          const language = project.language || 'Other';
-          const matchesFilter = activeFilter === 'all' || language === activeFilter;
-          const matchesSearch = `${project.name} ${project.description || ''} ${language}`.toLowerCase().includes(term);
-          return matchesFilter && matchesSearch;
-        });
-        count.textContent = `${shown.length} project${shown.length === 1 ? '' : 's'}`;
-        if (!shown.length) {
-          grid.innerHTML = '<div class="empty">No projects match that search. Try another name or filter.</div>';
-          return;
-        }
-        grid.innerHTML = shown.map(project => {
-          const name = escapeHTML(project.name);
-          const description = escapeHTML(project.description || 'A project by Deepak Gedere. Explore the repository for more details.');
-          const language = escapeHTML(project.language || 'Other');
-          const url = escapeHTML(project.html_url);
-          const updated = dateLabel(project.updated_at);
-          return `<article class="project"><div class="project-top"><span class="repo-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 6.5 3.5 12 8 17.5M16 6.5l4.5 5.5-4.5 5.5M14 4l-4 16"></path></svg></span><a class="project-link" href="${url}" target="_blank" rel="noreferrer" aria-label="View ${name} on GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 4h6v6M20 4l-9 9"></path><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"></path></svg></a></div><h3>${name}</h3><p>${description}</p><div class="project-meta"><span class="language" data-language="${language}">${language}</span><span>${escapeHTML(updated)}</span></div></article>`;
-        }).join('');
-      };
-      document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => {
-        document.querySelector('.filter.active')?.classList.remove('active');
-        button.classList.add('active');
-        activeFilter = button.dataset.filter;
-        render();
-      }));
-      search.addEventListener('input', render);
+    <script>
       document.getElementById('year').textContent = new Date().getFullYear();
-      projects = fallback;
-      render();
-      fetch(`https://api.github.com/users/${username}/repos?type=owner&per_page=100&sort=updated`, {headers:{Accept:'application/vnd.github+json'}})
-        .then(response => { if (!response.ok) throw new Error('GitHub API unavailable'); return response.json(); })
-        .then(repos => {
-          if (!Array.isArray(repos)) throw new Error('Unexpected GitHub response');
-          projects = repos.filter(repo => !repo.fork && repo.name !== `${username}.github.io`).sort((a,b) => new Date(b.updated_at) - new Date(a.updated_at));
-          render();
-        })
-        .catch(() => {
-          note.textContent = 'Showing a saved list of public projects; live GitHub updates are temporarily unavailable.';
-          note.classList.add('show');
-        });
-    })();
-  </script>
-</body>
+    </script>
+  </body>
 </html>
